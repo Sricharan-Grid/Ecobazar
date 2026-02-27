@@ -58,6 +58,14 @@
     }
   }
 
+   // Tablet - Landscape
+  @if $breakpoint == tab-land1 {
+    @media only screen and (max-width: 70.625em) {
+      //1130px
+      @content;
+    }
+  }
+
   //Big - Desktop
   @if $breakpoint == big-desktop {
     @media only screen and (max-width: 112.75em) {

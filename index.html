@@ -91,8 +91,35 @@
           </div>
         </div>
       </div>
+
       <!-- Nav options Contact  -->
       <div class="header__bottom">
+        <!-- Hamburger Menu  -->
+        <div class="hamburger-menu">
+          <span class="hamburger-menu__bar">&nbsp;</span>
+
+          <!-- Visible in Smaller Screens only -->
+          <ul class="hamburger-menu__options hamburger-hidden">
+            <li class="list-item list-item--1">
+              <a href="#" class="list-item--link link">Home</a>
+            </li>
+            <li class="list-item list-item--2">
+              <a
+                href="./templates/products.html?category=all"
+                class="list-item--link link"
+                >Shop</a
+              >
+            </li>
+            <li href="" class="list-item list-item--3">
+              <a class="list-item--link link">About Us</a>
+            </li>
+            <li class="list-item list-item--4">
+              <a href="" class="list-item--link link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Normal Navs  -->
         <ul class="header__bottom--left">
           <li class="list-item list-item--1">
             <a href="#" class="list-item--link link">Home</a>
@@ -114,8 +141,36 @@
 
         <div class="header__bottom--contact">
           <img src="./img/call.png" class="call-icon icon" alt="call-icon" />
-
           <p class="contact-number">+91 98765 43210</p>
+
+          <!-- visible only on small screens Cart and Wishlist  -->
+
+          <div class="header__middle--favs small-device-favs">
+            <a href="#" class="wishlist" id="wishlist"
+              ><img
+                src="./img/heart-white.png"
+                class="wishlist-icon icon"
+                alt="wishlist-icon"
+              />
+            </a>
+
+            <div class="cart">
+              <div class="cart__icon">
+                <img
+                  src="./img/bag-white.png"
+                  class="cartBag-icon icon"
+                  alt="cartBag-icon"
+                />
+
+                <span class="cart-items-count">2</span>
+              </div>
+
+              <div class="cart__total">
+                <p class="cart__total--title">Shopping cart</p>
+                <p class="cart__total--price">&#8377; 199.96</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

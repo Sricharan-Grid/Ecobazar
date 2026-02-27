@@ -3,6 +3,7 @@
   @include flex-centre;
   flex-direction: column;
   margin: 0;
+   position: relative;
 
   .icon {
     width: 2.7rem;
@@ -24,8 +25,14 @@
     @include flex-sb;
     border: 1px solid $color-grey-light-1;
 
+    //Responsive Tab-port 600px
+    @include respond(phone) {
+      display: none;
+    }
+
     &--left {
-      width: 30%;
+      // width: 30%;
+      flex: 1;
       font-size: 1.5rem;
       color: $color-grey;
       @include flex-centre;
@@ -37,7 +44,8 @@
     }
 
     &--right {
-      width: 40%;
+      // width: 40%;
+      flex: 2;
       @include flex-even;
       font-size: 1.5rem;
       color: $color-grey;
@@ -66,28 +74,52 @@
 
   &__middle {
     width: 100%;
+    // flex: 1;
     padding: 1rem 15rem;
     // background-color: aqua;
     @include flex-sb;
     flex-wrap: wrap;
 
+    //Responsive Tab-port 900px
+    @include respond(tab-port) {
+      margin: auto;
+    }
+
     .logo {
       width: 18.3rem;
+
+      //Responsive Tab-port 900px
+      @include respond(tab-port) {
+        margin: auto;
+      }
     }
 
     &--searchbar {
       width: 35%;
+      // flex: 1;
       @include flex-centre;
 
+      //Responsive Tab-land1 1130px
+      @include respond(tab-land1) {
+        width: 45%;
+      }
+
+      //Responsive Tab-port 900px
+      @include respond(tab-port) {
+        width: 60%;
+        margin: auto;
+      }
+
       .search-text {
-        width: 79%;
+        // width: 79%;
+        flex: 2;
         padding: 1rem;
         border: 1px solid $color-grey-light-1;
         border-radius: 0.6rem 0 0 0.6rem;
       }
 
       .search-btn {
-        width: 20%;
+        flex: 1;
         background-color: $color-primary;
         border: none;
         padding: 1rem;
@@ -98,17 +130,38 @@
     }
 
     &--favs {
-      width: 20%;
-      @include flex-even;
+      width: 25%;
+      // flex: 1;
+      @include flex-sb;
+
+      //Responsive Tab-port 900px
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      //Responsive Tab-land1 1130px
+      @include respond(tab-land1) {
+        display: none;
+      }
     }
 
     .cart {
-      width: 60%;
+      width: 80%;
+      // flex: 1;
       @include flex-even;
       flex-wrap: wrap;
 
+      //Responsive Tab-land1 1130px
+      @include respond(tab-land1) {
+        background-color: aqua;
+      }
+
       &__icon {
         position: relative;
+      }
+
+      &__total {
+        font-size: 1.4rem;
       }
     }
 
@@ -134,6 +187,7 @@
     background-color: $color-grey-dark-1;
     color: $color-grey-light-1;
     @include flex-sb;
+    // position: relative;
 
     &--left {
       width: 40%;
@@ -141,6 +195,12 @@
       flex-wrap: wrap;
       text-decoration: none;
       list-style: none;
+      position: relative;
+
+      //Responsive Tab-port 900px
+      @include respond(tab-port) {
+        display: none;
+      }
     }
 
     .list-item--link:hover,
@@ -155,9 +215,149 @@
       @include flex-centre;
       flex-wrap: wrap;
 
+      .call-icon,
+      .contact-number {
+        //Responsive Tab-land1 1130px
+        @include respond(tab-land1) {
+          width: 0;
+          display: none;
+        }
+      }
+
       .contact-number {
         margin-left: 0.6rem;
       }
     }
+  }
+}
+
+//Hamburger Menu
+
+.hamburger-menu {
+  width: 20%;
+  // flex: 1;
+  display: none;
+  position: relative;
+  transition: all 0.3s;
+
+  //Responsive Tab-port 900px
+  @include respond(tab-port) {
+    display: block;
+  }
+
+  &__bar {
+    position: relative;
+    margin-top: 3.5rem;
+    @include flex-sb;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 0.2rem;
+      background-color: $color-white;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.8s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+
+    //Toggle for Close and visible
+    &--close {
+      background-color: transparent;
+      transition: all 0.6s;
+      &::before {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__options {
+    width: 100%;
+    text-decoration: none;
+    @include flex-centre;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s;
+    position: absolute;
+    left: 3;
+    background-color: $color-grey-dark-1;
+    border-radius: 0.5rem;
+    padding: 3rem 1rem;
+    line-height: 3rem;
+  }
+  .list-item {
+    list-style: none;
+    transition: all 0.3s;
+  }
+
+  .hamburger-hidden {
+    display: none;
+  }
+}
+
+.small-device-favs {
+  width: 100%;
+  // flex: 2;
+  display: none;
+
+  .cart {
+    // flex: 1;
+    width: 20%;
+    @include flex-even;
+    &__total {
+      font-size: 1.3rem;
+
+      //Responsive Tab-land1 1130px
+      @include respond(tab-land1) {
+        display: none;
+      }
+    }
+
+    &__icon {
+      position: relative;
+    }
+  }
+
+  .cart-items-count {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid $color-white;
+    background-color: $color-primary-dark;
+    color: $color-white;
+    text-align: center;
+    padding: 0.4rem;
+    position: absolute;
+    top: -0.5rem;
+    left: 1.3rem;
+    border-radius: 50%;
+    font-size: 0.6rem;
+  }
+  //Responsive Tab-port 900px
+  @include respond(tab-port) {
+    @include flex-even;
+  }
+
+  //Responsive Tab-land1 1130px
+  @include respond(tab-land1) {
+    @include flex-even;
   }
 }
