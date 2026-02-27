@@ -236,7 +236,7 @@ body {
 }
 
 .hamburger-menu {
-  width: 20%;
+  flex: 1;
   display: none;
   position: relative;
   transition: all 0.3s;
@@ -284,7 +284,7 @@ body {
   transform: rotate(45deg);
 }
 .hamburger-menu__options {
-  width: 100%;
+  width: 80%;
   text-decoration: none;
   display: flex;
   justify-content: center;

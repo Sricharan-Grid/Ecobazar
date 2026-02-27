@@ -3,7 +3,7 @@
   @include flex-centre;
   flex-direction: column;
   margin: 0;
-   position: relative;
+  position: relative;
 
   .icon {
     width: 2.7rem;
@@ -234,8 +234,8 @@
 //Hamburger Menu
 
 .hamburger-menu {
-  width: 20%;
-  // flex: 1;
+  // width: 20%;
+  flex: 1;
   display: none;
   position: relative;
   transition: all 0.3s;
@@ -291,7 +291,7 @@
   }
 
   &__options {
-    width: 100%;
+    width: 80%;
     text-decoration: none;
     @include flex-centre;
     flex-direction: column;
