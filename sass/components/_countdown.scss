@@ -1,0 +1,22 @@
+.countdown {
+  width: 80%;
+  @include flex-even;
+  position: relative;
+  margin: auto;
+  margin-top: 2rem;
+
+  &__element {
+    @include flex-even;
+    flex-direction: column;
+  }
+
+  .time-element {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+
+  .time-unit {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}

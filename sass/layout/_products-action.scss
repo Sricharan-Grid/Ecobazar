@@ -1,0 +1,49 @@
+.products {
+  &__actions {
+    width: 78%;
+    margin: 2rem;
+    // background-color: aqua;
+    @include flex-sb;
+    color: $color-grey;
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    //Responsive phone 600px
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    &--filter-containter {
+      @include flex-sb;
+      padding: 1rem;
+    }
+
+    &--sort-containter {
+      @include flex-sb;
+      padding: 1rem;
+
+      .sort-options {
+        @include flex-even;
+
+        //Responsive phone 600px
+        @include respond(phone) {
+          flex-direction: column;
+        }
+
+        &:not(:first-child) {
+          margin-left: 3rem;
+        }
+      }
+    }
+
+    .dropdown {
+      padding: 0.5rem;
+      margin-left: 1rem;
+      border-radius: 0.4rem;
+      border:
+        0.1rem,
+        solid $color-grey;
+      color: $color-grey;
+    }
+  }
+}

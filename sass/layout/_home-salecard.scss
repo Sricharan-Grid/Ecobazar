@@ -1,0 +1,92 @@
+.sale-grid {
+  width: 80%;
+  display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  margin: auto;
+
+  //Responsive Tab-Port 900px
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    width: 100%;
+    height: 55vh;
+    @include flex-sb;
+    border-radius: 0.8rem;
+    text-align: center;
+    background-size: cover;
+
+    //Responsive Tab-Port 900px
+    // @include respond(tab-port) {
+    //   // height: 30vh;
+    // }
+
+    &--1 {
+      background-image: url("../../img/sale-card/sale-card-img1.png");
+      color: $color-white;
+    }
+
+    &--2 {
+      background-image: url("../../img/sale-card/sale-card-img2.png");
+      color: $color-white;
+    }
+
+    &--3 {
+      background-image: url("../../img/sale-card/sale-card-img3.png");
+    }
+
+    //Responsive Tab-Port 900px
+    @include respond(tab-port) {
+      margin: auto;
+    }
+
+    &--content {
+      width: 90%;
+      align-self: flex-start;
+      margin: auto;
+      margin-top: 3rem;
+    }
+
+    .sale-card {
+      &__text1 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      &__text2 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 2rem;
+      }
+
+      &__text3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-top: 2rem;
+
+        .price {
+          color: $color-warning;
+        }
+
+        .price__black-bg {
+          background-color: $color-black;
+          color: $color-yellow;
+          padding: 0.6rem 1.2rem;
+          border-radius: 0.5rem;
+        }
+      }
+
+      &__btn {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

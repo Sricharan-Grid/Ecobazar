@@ -1,0 +1,56 @@
+.categories-container {
+  width: 80%;
+  @include flex-centre;
+  flex-direction: column;
+  margin: auto;
+  padding: 3rem 0rem;
+
+  &__heading {
+    align-self: flex-start;
+    padding: 3rem 0rem;
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+}
+
+.categories {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.6rem;
+  margin: auto;
+  padding: 2rem;
+
+  &__card {
+    margin: auto;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 1px solid $color-grey-light-1;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: $color-black;
+
+    &--img {
+      width: 19rem;
+      padding: 1rem;
+    }
+
+    &--title {
+      padding: 1rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    &:visited {
+      color: $color-black;
+    }
+
+    &:hover,
+    &:active {
+      transform: scale(1.01);
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      box-shadow: 0 0.1rem 1rem 0.3rem rgba($color-primary, 0.2);
+    }
+  }
+}

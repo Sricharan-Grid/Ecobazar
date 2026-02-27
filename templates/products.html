@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="styleSheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="../img/icon.png" />
+    <title>EcoBazar</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Location, Signin/SignUp , Language, Currency -->
+      <div class="header__top">
+        <!-- Location -->
+        <div class="header__top--left">
+          <img
+            src="../img/location-pin.png"
+            alt="location-pin"
+            class="location-pin"
+          />
+          <p class="city">East Tambaram, Chennai - 59 , Tamilnadu , India</p>
+        </div>
+
+        <!-- Region -->
+        <div class="header__top--right">
+          <div class="region">
+            <p class="language">ENG &#x2304;</p>
+
+            <p class="currency">INR &#x2304;</p>
+          </div>
+          <!-- Signin/SignUp -->
+          <div class="auth">
+            <a href="#" class="auth--signin authLink link" id="Signin"
+              >Sign In</a
+            >
+            <span> / </span>
+            <a href="#" class="auth--signup authLink link" id="SignUp"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Logo, SearchBar, Wishlist, Cart   -->
+      <div class="header__middle">
+        <!-- Logo -->
+        <img src="../img/logo.png" alt="EcoBazar-Logo" class="logo" />
+
+        <!-- SearchBar  -->
+        <div class="header__middle--searchbar">
+          <input
+            class="search-text"
+            id="search-text"
+            placeholder="&#128269; Search"
+          />
+          <button class="btn search-btn">Search</button>
+        </div>
+
+        <!-- Cart and Wishlist  -->
+
+        <div class="header__middle--favs">
+          <a href="#" class="wishlist" id="wishlist"
+            ><img
+              src="../img/heart.png"
+              class="wishlist-icon icon"
+              alt="wishlist-icon"
+            />
+          </a>
+
+          <div class="cart">
+            <div class="cart__icon">
+              <img
+                src="../img/bag.png"
+                class="cartBag-icon icon"
+                alt="cartBag-icon"
+              />
+
+              <span class="cart-items-count">2</span>
+            </div>
+
+            <div class="cart__total">
+              <p class="cart__total--title">Shopping cart</p>
+              <p class="cart__total--price">&#8377; 199.96</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nav options Contact  -->
+      <div class="header__bottom">
+        <ul class="header__bottom--left">
+          <li class="list-item list-item--1">
+            <a href="../index.html#" class="list-item--link link">Home</a>
+          </li>
+          <li class="list-item list-item--2">
+            <a href="#" class="list-item--link link">Shop</a>
+          </li>
+          <li href="" class="list-item list-item--3">
+            <a class="list-item--link link">About Us</a>
+          </li>
+          <li class="list-item list-item--4">
+            <a href="" class="list-item--link link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="header__bottom--contact">
+          <img src="../img/call.png" class="call-icon icon" alt="call-icon" />
+
+          <p class="contact-number">+91 98765 43210</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Products Grid -->
+
+    <section class="products">
+      <!-- Page Map  -->
+      <!-- <div class="products__page-map"></div> -->
+
+      <!-- Products Banner  -->
+      <div class="products__banner">
+        <div class="products__banner--content">
+          <p class="products-banner__text1">Best Deals</p>
+
+          <h2 class="products-banner__text2">Sale of the Month</h2>
+
+          <div class="products-banner__text3 countdown">
+            <div class="countdown__element">
+              <div class="time-element days">00</div>
+              <p class="time-unit">days</p>
+            </div>
+
+            <span>:</span>
+
+            <div class="countdown__element">
+              <p class="time-element hours">00</p>
+              <p class="time-unit">hours</p>
+            </div>
+
+            <span>:</span>
+
+            <div class="countdown__element">
+              <p class="time-element minutes">00</p>
+              <p class="time-unit">mins</p>
+            </div>
+
+            <span>:</span>
+
+            <div class="countdown__element">
+              <p class="time-element seconds">00</p>
+              <p class="time-unit">secs</p>
+            </div>
+          </div>
+
+          <button class="btn btn--green products-banner__btn">
+            Shop Now &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter and Sord Area  -->
+
+      <div class="products__actions">
+        <!-- Filter -->
+        <div class="products__actions--filter-containter">
+          <p class="sort-options__label">Filter :</p>
+
+          <select class="filter-options dropdown" name="category">
+            <option value="all">All</option>
+            <option value="freshfruits">Fruits</option>
+            <option value="freshvegetables">Vegetables</option>
+            <option value="meatfish">Meat & Fish</option>
+          </select>
+        </div>
+
+        <!-- Sort -->
+        <div class="products__actions--sort-containter">
+          <!-- Alphabetical Sort -->
+
+          <div class="sort-options">
+            <p class="sort-options__label">Sort :</p>
+            <select class="sort-options__dropdown dropdown" name="sort">
+              <option value="asc">A - Z</option>
+              <option value="desc">Z - A</option>
+            </select>
+          </div>
+
+          <!-- Rating Sort  -->
+          <div class="sort-options">
+            <p class="sort-options__label">Rating :</p>
+            <select
+              class="rating-options__dropdown dropdown"
+              name="rating-sort"
+            >
+              <option value="high">Highest - Lowest</option>
+              <option value="low">Lowest - Highest</option>
+            </select>
+          </div>
+
+          <!-- Price Sort  -->
+        </div>
+      </div>
+
+      <div class="products__prods">
+        <!-- Cards -->
+
+        <!-- <div class="products__prods--card">
+          <p class="product-card__stock product-card__stock--nostock stock">
+            less Stock
+          </p>
+          <img
+            src="../img/products/fruits/kashmir_apple.jpg"
+            alt=""
+            class="product-card__img"
+          />
+
+          <div class="product-card__details">
+            <div class="text">
+              <p class="product-card__details--name">Kashmir Apple</p>
+              <p class="product-card__details--price">&#8377; 100</p>
+              <p class="product-card__details--rating">★★★</p>
+            </div>
+            <img
+              src="../img/products/add-to-cart.png"
+              alt="Add To Cart"
+              class="product-card__details--cart icon"
+            />
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Footer Section  -->
+
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- About  -->
+        <div class="footer__container--about">
+          <img
+            src="../img/logo-white.png"
+            alt="EcoBazar-Logo"
+            class="footer-logo logo"
+          />
+
+          <p class="footer-about__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="footer-about__contact">
+            <p>+91 98765 43210</p>
+            <span>or</span>
+            <p>Proxy@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- My Account -->
+        <ul class="footer__container--account footer-links">
+          <h3 class="footer-heading">My Account</h3>
+          <li><a href="" class="footer-links__link link">My Account</a></li>
+          <li><a href="" class="footer-links__link link">Order History</a></li>
+          <li><a href="" class="footer-links__link link">Shoping Cart</a></li>
+          <li><a href="" class="footer-links__link link">Wishlist</a></li>
+        </ul>
+
+        <!-- Helps -->
+        <ul class="footer__container--helps footer-links">
+          <h3 class="footer-heading">Helps</h3>
+          <li><a href="" class="footer-links__link link">Contact</a></li>
+          <li><a href="" class="footer-links__link link">FAQs</a></li>
+          <li>
+            <a href="" class="footer-links__link link">Terms & Condition</a>
+          </li>
+          <li><a href="" class="footer-links__link link">Privacy Policy</a></li>
+        </ul>
+
+        <!-- Proxy -->
+        <ul class="footer__container--proxy footer-links">
+          <h3 class="footer-heading">Proxy</h3>
+          <li><a href="" class="footer-links__link link">About</a></li>
+          <li><a href="" class="footer-links__link link">Shop</a></li>
+          <li><a href="#" class="footer-links__link link">Products</a></li>
+          <li><a href="" class="footer-links__link link">Track Order</a></li>
+        </ul>
+
+        <!-- category -->
+        <ul class="footer__container--category footer-links">
+          <h3 class="footer-heading">Categories</h3>
+          <li>
+            <a href="" class="footer-links__link link">Fruit & Vegetables</a>
+          </li>
+          <li><a href="" class="footer-links__link link">Meat & Fish</a></li>
+          <li><a href="" class="footer-links__link link">Bread & Bakery</a></li>
+          <li>
+            <a href="" class="footer-links__link link">Beauty & Health</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__copyrights">
+        <!-- Copyright text  -->
+        <p class="footer__copyrights--text">
+          Ecobazar eCommerce &copy; 2026. All Rights Reserved
+        </p>
+
+        <!-- Payment Gateways -->
+
+        <ul class="footer__copyrights--payments">
+          <li class="payment-link link">
+            <img
+              src="../img/payments/apple-pay.png"
+              class="payment-icon icon"
+              alt="ApplePay"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="../img/payments/visa.png"
+              class="payment-icon icon"
+              alt="Visa"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="../img/payments/discover.png"
+              class="payment-icon icon"
+              alt="Discover"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="../img/payments/master.png"
+              class="payment-icon icon"
+              alt="Master"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="../img/payments/secure-payment.png"
+              class="payment-icon icon"
+              alt="Secure-Payment"
+            />
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script differ src="./scripts/script.js"></script>
+    <script differ src="./scripts/products.js"></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+.header {
+  width: 100%;
+  @include flex-centre;
+  flex-direction: column;
+  margin: 0;
+
+  .icon {
+    width: 2.7rem;
+  }
+
+  .link {
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .link:link,
+  .link:visited {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  &__top {
+    width: 100%;
+    padding: 1rem 10rem;
+    @include flex-sb;
+    border: 1px solid $color-grey-light-1;
+
+    &--left {
+      width: 30%;
+      font-size: 1.5rem;
+      color: $color-grey;
+      @include flex-centre;
+
+      .location-pin {
+        width: 1.5rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &--right {
+      width: 40%;
+      @include flex-even;
+      font-size: 1.5rem;
+      color: $color-grey;
+      text-align: center;
+      //   flex-wrap: nowrap;
+
+      .region {
+        width: 50%;
+        @include flex-around;
+        align-self: center;
+      }
+
+      .auth {
+        width: 50%;
+        //  @include flex-even;
+        align-self: center;
+      }
+
+      .authLink:link,
+      .authLink:visited {
+        // text-decoration: none;
+        color: $color-grey;
+      }
+    }
+  }
+
+  &__middle {
+    width: 100%;
+    padding: 1rem 15rem;
+    // background-color: aqua;
+    @include flex-sb;
+    flex-wrap: wrap;
+
+    .logo {
+      width: 18.3rem;
+    }
+
+    &--searchbar {
+      width: 35%;
+      @include flex-centre;
+
+      .search-text {
+        width: 79%;
+        padding: 1rem;
+        border: 1px solid $color-grey-light-1;
+        border-radius: 0.6rem 0 0 0.6rem;
+      }
+
+      .search-btn {
+        width: 20%;
+        background-color: $color-primary;
+        border: none;
+        padding: 1rem;
+        border-radius: 0 0.6rem 0.6rem 0;
+        color: $color-white;
+        font-weight: 300;
+      }
+    }
+
+    &--favs {
+      width: 20%;
+      @include flex-even;
+    }
+
+    .cart {
+      width: 60%;
+      @include flex-even;
+      flex-wrap: wrap;
+
+      &__icon {
+        position: relative;
+      }
+    }
+
+    .cart-items-count {
+      width: 1.8rem;
+      height: 1.8rem;
+      border: 1px solid $color-white;
+      background-color: $color-primary-dark;
+      color: $color-white;
+      text-align: center;
+      padding: 0.4rem;
+      position: absolute;
+      top: -0.5rem;
+      left: 1.2rem;
+      border-radius: 50%;
+      font-size: 0.6rem;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    padding: 1rem 10rem;
+    background-color: $color-grey-dark-1;
+    color: $color-grey-light-1;
+    @include flex-sb;
+
+    &--left {
+      width: 40%;
+      @include flex-even;
+      flex-wrap: wrap;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    .list-item--link:hover,
+    .list-item--link:active,
+    .list-item--link:focus {
+      color: $color-primary;
+      transform: scale(1.7);
+    }
+
+    &--contact {
+      width: 30%;
+      @include flex-centre;
+      flex-wrap: wrap;
+
+      .contact-number {
+        margin-left: 0.6rem;
+      }
+    }
+  }
+}

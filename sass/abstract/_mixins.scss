@@ -1,0 +1,68 @@
+// Flex Box
+@mixin flex-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-even {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin flex-around {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+//Responsive
+
+@mixin respond($breakpoint) {
+  // Small - Phone
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 30em) {
+      //480px
+      @content;
+    }
+  }
+
+  // Phone
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  // Tablet - Portrait
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  // Tablet - Landscape
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 79.375em) {
+      //1260px
+      @content;
+    }
+  }
+
+  //Big - Desktop
+  @if $breakpoint == big-desktop {
+    @media only screen and (max-width: 112.75em) {
+      //1800px
+      @content;
+    }
+  }
+}

@@ -1,0 +1,215 @@
+.footer {
+  width: 100%;
+  background-color: $color-grey-dark-2;
+  margin-top: 3rem;
+
+  &__container {
+    width: 80%;
+    @include flex-even;
+    margin: auto;
+    padding: 4rem 0;
+    color: $color-white;
+
+    //Responsive Tab-Port 900px
+    @include respond(tab-port) {
+      width: 100%;
+      padding: 2rem;
+    }
+
+    &--about {
+      // width: 28%;
+      flex: 2;
+      @include flex-sb;
+      flex-direction: column;
+      align-items: flex-start;
+
+      //Responsive Small-Phone 480px
+      @include respond(small-phone) {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .footer-about {
+      &__text {
+        width: 80%;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $color-grey;
+        margin-top: 2rem;
+
+        //Responsive Tab-Port 900px
+        @include respond(tab-port) {
+          font-size: 1rem;
+        }
+      }
+
+      &__contact {
+        // width: 100%;
+        font-size: 1.2rem;
+        font-weight: 500;
+        @include flex-centre;
+        color: $color-white;
+        margin-top: 2rem;
+        flex: 1;
+        flex-wrap: wrap;
+
+        //Responsive Tab-Port 900px
+        @include respond(tab-port) {
+          font-size: 1rem;
+        }
+
+        & > p {
+          display: block;
+          border-bottom: 0.1rem solid $color-primary;
+          transition: all 0.3s;
+          padding: 1rem;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    .footer-logo {
+      width: 60%;
+
+      //Responsive Small-Phone 480px
+      @include respond(small-phone) {
+        width: 10%;
+      }
+
+      //Responsive Tab-Port 900px
+      @include respond(tab-port) {
+        width: 50%;
+      }
+    }
+
+    .footer-heading {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $color-white;
+      padding: 2rem 0;
+
+      //Responsive Tab-Landscape 1200px
+      @include respond(tab-landscape) {
+        font-size: 1.3rem;
+      }
+
+      //Responsive Tab-port 900px
+      @include respond(tab-port) {
+        font-size: 1rem;
+      }
+    }
+    .footer-links {
+      // width: 16%;
+      flex: 1;
+      // height: 100%;
+      list-style: none;
+      @include flex-sb;
+      flex-direction: column;
+
+      //Responsive Small-Phone 480px
+      @include respond(small-phone) {
+        display: none;
+      }
+
+      &__link {
+        color: $color-grey;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-decoration: none;
+        // line-height: 4vh;
+        transition: all 0.3s;
+
+        //Responsive Tab-Landscape 1200px
+        @include respond(tab-landscape) {
+          font-size: 1rem;
+        }
+
+        //Responsive Tab-port 900px
+        @include respond(tab-port) {
+          font-size: 0.8rem;
+        }
+
+        &:hover,
+        &:active {
+          transform: scale(1.1);
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  &__copyrights {
+    width: 80%;
+    @include flex-sb;
+    border-top: 0.1rem solid $color-grey;
+    margin: auto;
+    padding: 2rem 0;
+
+    //Responsive Tab-Landscape 900px
+    @include respond(tab-port) {
+      width: 100%;
+      padding: 2rem;
+    }
+    //Responsive phone 600px
+    @include respond(phone) {
+      flex-direction: column-reverse;
+    }
+
+    //Responsive Tab-Landscape 900px
+    @include respond(tab-port) {
+      // width: 100%;
+      padding: 2rem;
+    }
+
+    &--text {
+      flex: 2;
+      color: $color-grey;
+      font-size: 1.4rem;
+      font-weight: 400;
+
+      //Responsive Tab-Landscape 900px
+      @include respond(tab-port) {
+        font-size: 1rem;
+      }
+    }
+
+    &--payments {
+      flex: 2;
+      @include flex-even;
+      list-style: none;
+
+      //Responsive phone 600px
+      @include respond(phone) {
+        flex: 1;
+      }
+    }
+
+    .payment-link {
+      // width: 5rem;
+      // height: 3.5rem;
+      // border-radius: 0.5rem;
+      // border: 0.1rem solid $color-grey;
+      // transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+        border: 0.1rem solid $color-grey-dark-1;
+      }
+    }
+    .payment-icon {
+      width: 5rem;
+      // height: 3.5rem;
+      border-radius: 0.5rem;
+      border: 0.1rem solid $color-grey;
+      transition: all 0.3s;
+      // width: 100%;
+      padding: 1rem;
+      margin: 1rem;
+    }
+  }
+}

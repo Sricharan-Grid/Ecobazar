@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="styleSheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="../img/icon.png" />
+    <title>EcoBazar</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Location, Signin/SignUp , Language, Currency -->
+      <div class="header__top">
+        <!-- Location -->
+        <div class="header__top--left">
+          <img
+            src="./img/location-pin.png"
+            alt="location-pin"
+            class="location-pin"
+          />
+          <p class="city">East Tambaram, Chennai - 59 , Tamilnadu , India</p>
+        </div>
+
+        <!-- Region -->
+        <div class="header__top--right">
+          <div class="region">
+            <p class="language">ENG &#x2304;</p>
+
+            <p class="currency">INR &#x2304;</p>
+          </div>
+          <!-- Signin/SignUp -->
+          <div class="auth">
+            <a href="#" class="auth--signin authLink link" id="Signin"
+              >Sign In</a
+            >
+            <span> / </span>
+            <a href="#" class="auth--signup authLink link" id="SignUp"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Logo, SearchBar, Wishlist, Cart   -->
+      <div class="header__middle">
+        <!-- Logo -->
+        <img src="img/logo.png" alt="EcoBazar-Logo" class="logo" />
+
+        <!-- SearchBar  -->
+        <div class="header__middle--searchbar">
+          <input
+            class="search-text"
+            id="search-text"
+            placeholder="&#128269; Search"
+          />
+          <button class="btn search-btn">Search</button>
+        </div>
+
+        <!-- Cart and Wishlist  -->
+
+        <div class="header__middle--favs">
+          <a href="#" class="wishlist" id="wishlist"
+            ><img
+              src="./img/heart.png"
+              class="wishlist-icon icon"
+              alt="wishlist-icon"
+            />
+          </a>
+
+          <div class="cart">
+            <div class="cart__icon">
+              <img
+                src="./img/bag.png"
+                class="cartBag-icon icon"
+                alt="cartBag-icon"
+              />
+
+              <span class="cart-items-count">2</span>
+            </div>
+
+            <div class="cart__total">
+              <p class="cart__total--title">Shopping cart</p>
+              <p class="cart__total--price">&#8377; 199.96</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nav options Contact  -->
+      <div class="header__bottom">
+        <ul class="header__bottom--left">
+          <li class="list-item list-item--1">
+            <a href="#" class="list-item--link link">Home</a>
+          </li>
+          <li class="list-item list-item--2">
+            <a
+              href="./templates/products.html?category=all"
+              class="list-item--link link"
+              >Shop</a
+            >
+          </li>
+          <li href="" class="list-item list-item--3">
+            <a class="list-item--link link">About Us</a>
+          </li>
+          <li class="list-item list-item--4">
+            <a href="" class="list-item--link link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div class="header__bottom--contact">
+          <img src="./img/call.png" class="call-icon icon" alt="call-icon" />
+
+          <p class="contact-number">+91 98765 43210</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner Section  -->
+    <section class="banner">
+      <!-- Banner Hero Image  -->
+      <div class="bannerHero">
+        <!-- Banner Left  -->
+        <div class="bannerHero__left">
+          <div class="bannerHero__left--content">
+            <h1 class="bannerHero__left--heading">
+              Fresh & Healthy Organic Food
+            </h1>
+
+            <div class="bannerHero__left--text">
+              <p class="bannerHero__left--discount">
+                Sale up to <span class="discount-percentage">30% OFF</span>
+              </p>
+
+              <p class="bannerHero__left--shipping">
+                Free shipping on all your order.
+              </p>
+            </div>
+
+            <button class="bannerHero__left--shopnow btn btn--white">
+              Shop now &rarr;
+            </button>
+          </div>
+        </div>
+        <!-- Banner Right -->
+        <div class="bannerHero__right">
+          <!-- Banner Right Top  -->
+          <div class="bannerHero__right--top">
+            <div class="right-top__content">
+              <p class="right-top__content--saletext">Summer Sale</p>
+
+              <h2 class="right-top__content--discount">75% OFF</h2>
+              <p class="right-top__content--terms">Only Fruit & Vegetable</p>
+
+              <button class="right-top__content--shopnow btn btn--transparent">
+                Shop now &rarr;
+              </button>
+            </div>
+          </div>
+          <!-- Banner Right Bottom -->
+          <div class="bannerHero__right--bottom">
+            <div class="right-bottom__content">
+              <p class="right-bottom__content--saletext">Best Deal</p>
+              <h2 class="right-bottom__content--discount">
+                Special Products Deal of the Month
+              </h2>
+              <button
+                class="right-bottom__content--shopnow btn btn--transparent"
+              >
+                Shop now &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features in Banner  -->
+      <div class="bannerFeatures">
+        <!-- Feature Items  -->
+
+        <!-- Item 1 -->
+        <div class="bannerFeatures__item bannerFeatures__item--1">
+          <img
+            src="./img/transport.png"
+            alt="Free-Shipping"
+            class="bannerFeatures__item--img icon"
+          />
+
+          <div class="feature-content">
+            <h3 class="feature-content__heading">Free Shipping</h3>
+            <p class="feature-content__text">Free shipping on all your order</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="bannerFeatures__item bannerFeatures__item--2">
+          <img
+            src="./img/support.png"
+            alt="Customer-Support"
+            class="bannerFeatures__item--img icon"
+          />
+
+          <div class="feature-content">
+            <h3 class="feature-content__heading">Customer Support 24/7</h3>
+            <p class="feature-content__text">Instant access to Support</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="bannerFeatures__item bannerFeatures__item--3">
+          <img
+            src="./img/secure-payment.png"
+            alt="Secure-Payment"
+            class="bannerFeatures__item--img icon"
+          />
+
+          <div class="feature-content">
+            <h3 class="feature-content__heading">100% Secure Payment</h3>
+            <p class="feature-content__text">We ensure your money is save</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="bannerFeatures__item bannerFeatures__item--4">
+          <img
+            src="./img/money-back.png"
+            alt="Money-Back"
+            class="bannerFeatures__item--img icon"
+          />
+
+          <div class="feature-content">
+            <h3 class="feature-content__heading">Money-Back Guarantee</h3>
+            <p class="feature-content__text">30 Days Money-Back Guarantee</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+
+    <section class="categories-container">
+      <h2 class="categories-container__heading">Popular Categories</h2>
+      <div class="categories">
+        <!-- Category Card 1 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=freshfruits"
+        >
+          <img
+            src="./img/categories/fruits.png"
+            alt="Fruits"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Fresh Fruit</h3>
+        </a>
+
+        <!-- Category Card 2 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=freshvegetables"
+        >
+          <img
+            src="./img/categories/vegetables.png"
+            alt="Vegetables"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Fresh Vegetables</h3>
+        </a>
+
+        <!-- Category Card 3 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=meatfish"
+        >
+          <img
+            src="./img/categories/meat.png"
+            alt="Meat-and-Fish"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Meat & Fish</h3>
+        </a>
+
+        <!-- Category Card 4 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/snacks.png"
+            alt="Snacks"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Snacks</h3>
+        </a>
+
+        <!-- Category Card 5 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/beverages.png"
+            alt="Beverages"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Beverages</h3>
+        </a>
+
+        <!-- Category Card 6 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/beauty-health.png"
+            alt="Beauty-&-Health"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Beauty & Health</h3>
+        </a>
+
+        <!-- Category Card 7 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/bread.png"
+            alt="Bread-&-Bakery"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Bread & Bakery</h3>
+        </a>
+
+        <!-- Category Card 8 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/baking.png"
+            alt="Baking-Needs"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Baking Needs</h3>
+        </a>
+
+        <!-- Category Card 9 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/cooking.png"
+            alt="Cooking"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Cooking</h3>
+        </a>
+        <!-- Category Card 10 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/diabetic-food.png"
+            alt="Diabetic-Food"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Diabetic Food</h3>
+        </a>
+        <!-- Category Card 11 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/dish-detergent.png"
+            alt="Dish-Detergents"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Dish Detergents</h3>
+        </a>
+        <!-- Category Card 12 -->
+        <a
+          class="categories__card link"
+          href="./templates/products.html?category=all"
+        >
+          <img
+            src="./img/categories/oil.png"
+            alt="Oil"
+            class="categories__card--img"
+          />
+
+          <h3 class="categories__card--title">Oil</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sale Card  -->
+
+    <section class="sale-grid">
+      <!-- Sale Card 1  -->
+      <div class="sale-grid__card sale-grid__card--1">
+        <div class="sale-grid__card--content">
+          <p class="sale-card__text1">Best Deals</p>
+
+          <h2 class="sale-card__text2">Sale of the Month</h2>
+
+          <div class="sale-card__text3 countdown">
+            <div class="countdown__element">
+              <div class="time-element days">00</div>
+              <p class="time-unit">days</p>
+            </div>
+
+            <span>:</span>
+
+            <div class="countdown__element">
+              <p class="time-element hours">00</p>
+              <p class="time-unit">hours</p>
+            </div>
+
+            <span>:</span>
+
+            <div class="countdown__element">
+              <p class="time-element minutes">00</p>
+              <p class="time-unit">mins</p>
+            </div>
+
+            <span>:</span>
+
+            <div class="countdown__element">
+              <p class="time-element seconds">00</p>
+              <p class="time-unit">secs</p>
+            </div>
+          </div>
+
+          <button class="btn btn--white sale-card__btn">Shop Now &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Sale Card 2  -->
+      <div class="sale-grid__card sale-grid__card--2">
+        <div class="sale-grid__card--content">
+          <p class="sale-card__text1">85% Fat Free</p>
+
+          <h2 class="sale-card__text2">Low-Fat Meat</h2>
+
+          <p class="sale-card__text3">
+            Started at <span class="price">$79.99</span>
+          </p>
+
+          <button class="btn btn--white sale-card__btn">Shop Now &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Sale Card 3  -->
+      <div class="sale-grid__card sale-grid__card--3">
+        <div class="sale-grid__card--content">
+          <p class="sale-card__text1">Summer Sale</p>
+
+          <h2 class="sale-card__text2">100% Fresh Fruit</h2>
+
+          <p class="sale-card__text3">
+            Up to <span class="price__black-bg">64% OFF</span>
+          </p>
+
+          <button class="btn btn--white sale-card__btn">Shop Now &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section  -->
+
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- About  -->
+        <div class="footer__container--about">
+          <img
+            src="./img/logo-white.png"
+            alt="EcoBazar-Logo"
+            class="footer-logo logo"
+          />
+
+          <p class="footer-about__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+
+          <div class="footer-about__contact">
+            <p>+91 98765 43210</p>
+            <span>or</span>
+            <p>Proxy@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- My Account -->
+        <ul class="footer__container--account footer-links">
+          <h3 class="footer-heading">My Account</h3>
+          <li><a href="" class="footer-links__link link">My Account</a></li>
+          <li><a href="" class="footer-links__link link">Order History</a></li>
+          <li><a href="" class="footer-links__link link">Shoping Cart</a></li>
+          <li><a href="" class="footer-links__link link">Wishlist</a></li>
+        </ul>
+
+        <!-- Helps -->
+        <ul class="footer__container--helps footer-links">
+          <h3 class="footer-heading">Helps</h3>
+          <li><a href="" class="footer-links__link link">Contact</a></li>
+          <li><a href="" class="footer-links__link link">FAQs</a></li>
+          <li>
+            <a href="" class="footer-links__link link">Terms & Condition</a>
+          </li>
+          <li><a href="" class="footer-links__link link">Privacy Policy</a></li>
+        </ul>
+
+        <!-- Proxy -->
+        <ul class="footer__container--proxy footer-links">
+          <h3 class="footer-heading">Proxy</h3>
+          <li><a href="" class="footer-links__link link">About</a></li>
+          <li><a href="" class="footer-links__link link">Shop</a></li>
+          <li><a href="" class="footer-links__link link">Products</a></li>
+          <li><a href="" class="footer-links__link link">Track Order</a></li>
+        </ul>
+
+        <!-- category -->
+        <ul class="footer__container--category footer-links">
+          <h3 class="footer-heading">Categories</h3>
+          <li>
+            <a href="" class="footer-links__link link">Fruit & Vegetables</a>
+          </li>
+          <li><a href="" class="footer-links__link link">Meat & Fish</a></li>
+          <li><a href="" class="footer-links__link link">Bread & Bakery</a></li>
+          <li>
+            <a href="" class="footer-links__link link">Beauty & Health</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__copyrights">
+        <!-- Copyright text  -->
+        <p class="footer__copyrights--text">
+          Ecobazar eCommerce &copy; 2026. All Rights Reserved
+        </p>
+
+        <!-- Payment Gateways -->
+
+        <ul class="footer__copyrights--payments">
+          <li class="payment-link link">
+            <img
+              src="./img/payments/apple-pay.png"
+              class="payment-icon icon"
+              alt="ApplePay"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="./img/payments/visa.png"
+              class="payment-icon icon"
+              alt="Visa"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="./img/payments/discover.png"
+              class="payment-icon icon"
+              alt="Discover"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="./img/payments/master.png"
+              class="payment-icon icon"
+              alt="Master"
+            />
+          </li>
+
+          <li class="payment-link link">
+            <img
+              src="./img/payments/secure-payment.png"
+              class="payment-icon icon"
+              alt="Secure-Payment"
+            />
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script differ src="./templates/scripts/script.js"></script>
+</html>

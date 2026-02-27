@@ -1,0 +1,93 @@
+.products {
+  width: 100%;
+  @include flex-centre;
+  flex-direction: column;
+
+  &__banner {
+    width: 80%;
+    background: url("../../img/products/banner-img.jpg");
+    background-size: cover;
+    @include flex-sb;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    //Responsive phone 600px
+    @include respond(phone) {
+      background:
+        linear-gradient(rgba($color-black, 0.2) 0, rgba($color-black, 0.6) 80%),
+        url("../../img/products/banner-img.jpg");
+      background-size: cover;
+    }
+
+    &--content {
+      width: 30%;
+      padding: 2rem;
+      color: $color-white;
+      @include flex-centre;
+      //   align-items: flex-start;
+      flex-direction: column;
+      //   background-color: aqua;
+
+      //Responsive Tab-port 900px
+      @include respond(tab-port) {
+        width: 50%;
+      }
+
+      //Responsive phone 600px
+      @include respond(phone) {
+        width: 80%;
+        margin: auto;
+      }
+    }
+
+    .products-banner {
+      &__btn {
+        margin-top: 2rem;
+      }
+
+      &__text1 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        // text-align: left;
+        margin-top: 2rem;
+
+        //Responsive Tab-Land 1200px
+        @include respond(tab-land) {
+          font-size: 1.2rem;
+        }
+      }
+
+      &__text2 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 2rem;
+
+        //Responsive Tab-Land 1200px
+        @include respond(tab-land) {
+          font-size: 2rem;
+        }
+      }
+
+      &__text3 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-top: 2rem;
+
+        //Responsive Tab-Land 1200px
+        @include respond(tab-land) {
+          font-size: 1.4rem;
+        }
+
+        .time-element {
+          color: $color-primary;
+        }
+
+        & > span,
+        .time-unit {
+          color: $color-grey-light-1;
+        }
+      }
+    }
+  }
+}

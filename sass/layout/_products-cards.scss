@@ -1,0 +1,109 @@
+.products {
+  &__prods {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+
+    &--card {
+      @include flex-centre;
+      flex-direction: column;
+      margin: 1rem;
+      position: relative;
+      border-radius: 0.5rem;
+      border: 1px solid $color-grey-light-1;
+      transition: all 0.3s;
+
+      &:hover,
+      &:active {
+        transform: scale(1.01);
+        border: 1px solid $color-primary;
+        box-shadow: 0 0.1rem 1rem 0.3rem rgba($color-primary, 0.2);
+      }
+    }
+
+    .product-card {
+      &__img {
+        width: 15rem;
+        margin-top: 2rem;
+      }
+
+      &__stock {
+        // width: 80%;
+        position: absolute;
+        top: 0.5rem;
+        left: 0;
+        margin-left: 1rem;
+        // background-color: aqua;
+        padding: 0.4rem;
+        font-size: 1.2rem;
+        z-index: 20;
+        border-radius: 0.4rem;
+
+        &--instock {
+          background-color: $color-primary;
+          color: $color-white;
+        }
+
+        &--lessstock {
+          background-color: $color-yellow;
+          color: $color-black;
+        }
+
+        &--outofstock {
+          background-color: $color-warning-1;
+          color: $color-white;
+        }
+
+        &--hidden {
+          display: none;
+        }
+      }
+
+      &__details {
+        width: 95%;
+        @include flex-sb;
+        padding: 1rem;
+
+        &--name {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: $color-grey;
+        }
+
+        &--price {
+          font-size: 1.6rem;
+          font-weight: 500;
+        }
+
+        .actualprice {
+          font-size: 1rem;
+          color: $color-warning-1;
+        }
+
+        .star-gold {
+          color: $color-warning;
+        }
+
+        .star-grey {
+          color: $color-grey;
+        }
+
+        &--cart {
+          width: 3.8rem;
+          height: auto;
+          border-radius: 50%;
+          transition: all 0.3s;
+          cursor: pointer;
+
+          &:hover,
+          &:active {
+            transform: scale(1.01);
+            border: 1px solid $color-primary;
+            box-shadow: 0 0.1rem 1rem 0.3rem rgba($color-primary, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

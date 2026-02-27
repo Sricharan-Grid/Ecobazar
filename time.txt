@@ -1,0 +1,24 @@
+const timer = setInterval(() => {
+    const now = new Date();
+    
+    // 1. Set the target: Tomorrow at 00:00:00 (Midnight)
+    const tomorrow = new Date();
+    tomorrow.setHours(24, 0, 0, 0); // setHours(24) automatically moves to the next day
+
+    // 2. Calculate the difference in milliseconds
+    const diffMs = tomorrow - now;
+
+    // 3. Convert milliseconds to hours and minutes
+    const hoursPending = Math.floor(diffMs / (1000 * 60 * 60));
+    const minutesPending = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+    const secondsPending = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+    // 4. (Optional) Format for display
+    console.log(`Offer ends in: ${hoursPending}h ${minutesPending}m ${secondsPending}s`);
+    
+    // Stop the timer if the offer has expired
+    if (diffMs <= 0) {
+        clearInterval(timer);
+        console.log("Offer Expired");
+    }
+}, 1000);

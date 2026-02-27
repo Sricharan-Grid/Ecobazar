@@ -1,0 +1,276 @@
+.banner {
+  width: 80%;
+  @include flex-centre;
+  flex-direction: column;
+  margin: auto;
+
+  //Responsive Phone 600px
+  @include respond(phone) {
+    width: 98%;
+  }
+
+  .bannerHero {
+    width: 100%;
+    height: 60vh;
+    @include flex-even;
+    margin-top: 1rem;
+
+    //Responsive Tab-Landscape 1200px
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      height: 90vh;
+    }
+
+     //Responsive Tab-port 1200px
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    &__left {
+      width: 68%;
+      height: 99%;
+      @include flex-centre;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      background:
+        linear-gradient(
+          to right,
+          rgba($color-black, 60%) 0%,
+          rgba($color-black, 0%) 60%
+        ),
+        url("../../img/banner-img1.png");
+      background-size: cover;
+      border-radius: 0.8rem;
+      padding: 4rem;
+
+      //Responsive Tab-Landscape 1200px
+      @include respond(tab-land) {
+        width: 100%;
+      }
+
+      &--content {
+        width: 50%;
+
+        //Responsive Tab-Landscape 900px
+        @include respond(tab-port) {
+          width: 80%;
+        }
+
+        //Responsive Phone 600px
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      &--heading {
+        font-size: 4.8rem;
+        color: $color-white;
+        font-weight: 600;
+        text-transform: capitalize;
+
+        //Responsive Tab-Landscape 900px
+        @include respond(tab-port) {
+          font-size: 3rem;
+        }
+      }
+
+      &--text {
+        color: $color-white;
+        margin-top: 2rem;
+        font-weight: 500;
+        padding-left: 2rem;
+        border-left: 0.2rem solid $color-primary;
+      }
+
+      &--discount {
+        font-size: 2rem;
+        font-weight: 600;
+
+        //Responsive Phone 600px
+        @include respond(phone) {
+          font-size: 1.5rem;
+        }
+      }
+
+      .discount-percentage {
+        background-color: $color-warning;
+        padding: 0.4rem 1.2rem;
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      &--shipping {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-top: 2rem;
+
+        //Responsive Phone 600px
+        @include respond(phone) {
+          font-size: 1.5rem;
+        }
+      }
+
+      &--shopnow {
+        margin-top: 2rem;
+      }
+    }
+
+    &__right {
+      width: 28%;
+      height: 100%;
+      @include flex-even;
+      flex-direction: column;
+
+      //Responsive Tab-Landscape 1200px
+
+      @include respond(tab-land) {
+        flex-direction: row;
+        width: 100%;
+        margin: auto;
+      }
+
+      //Responsive Tab-Landscape 900px
+      @include respond(tab-port) {
+        height: 75%;
+      }
+
+      &--top {
+        width: 100%;
+        height: 48%;
+        background-image: url("../../img/banner-img2.png");
+        background-size: cover;
+        margin: auto;
+        border-radius: 0.8rem;
+        @include flex-centre;
+        flex-direction: column;
+
+        //Responsive Tab-Landscape 1200px
+
+        @include respond(tab-land) {
+          margin: 0;
+        }
+
+        .right-top__content {
+          width: 50%;
+          align-self: flex-start;
+          flex-grow: 1;
+          margin: 3.2rem;
+
+          &--saletext {
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-transform: uppercase;
+          }
+
+          &--discount {
+            font-size: 3.2;
+            font-weight: 600;
+            margin-top: 1rem;
+            text-transform: uppercase;
+          }
+
+          &--terms {
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-top: 1rem;
+          }
+
+          &--shopnow {
+            padding-left: 0;
+          }
+        }
+      }
+
+      &--bottom {
+        width: 100%;
+        height: 49%;
+        background-image: url("../../img/banner-img3.png");
+        background-size: cover;
+        border-radius: 0.8rem;
+
+        .right-bottom__content {
+          width: 80%;
+          height: 100%;
+          color: $color-white;
+          @include flex-centre;
+          flex-direction: column;
+          flex-wrap: wrap;
+          margin: auto;
+
+          &--saletext {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.3rem;
+          }
+
+          &--discount {
+            font-size: 2.7rem;
+            text-align: center;
+
+            //Responsive Phone 600px
+            @include respond(phone) {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+      &--top,
+      &--bottom {
+        //Responsive Tab-Landscape 1200px
+
+        @include respond(tab-land) {
+          width: 47%;
+          height: 100%;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  .bannerFeatures {
+    width: 100%;
+    margin: 2rem;
+    border-radius: 0.8rem;
+    // @include flex-even;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    box-shadow: 0 0.1rem 0.3rem 0.05rem rgba($color-grey, 0.2);
+    padding: 4rem;
+    
+
+    &__item {
+      @include flex-even;
+      &--img {
+        width: 4rem;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: scale(1.1) skewY(2deg);
+        }
+      }
+
+      .feature-content {
+        margin-left: 2rem;
+        &__heading {
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+
+        &__text {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: $color-grey;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}
