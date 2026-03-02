@@ -24,11 +24,26 @@ const offerTimer = (() => {
 
 const hamburger = document.querySelector(".hamburger-menu");
 const hamburgerBtn = document.querySelector(".hamburger-menu__bar");
-const hamburgerOptions = document.querySelector('.hamburger-menu__options');
+const hamburgerOptions = document.querySelector(".hamburger-menu__options");
 
 hamburgerBtn.addEventListener("click", () => {
   // hamburgerBtn.classList.remove("hamburger-menu__bar");
-  console.log('hamburger Clicked')
+  console.log("hamburger Clicked");
   hamburgerBtn.classList.toggle("hamburger-menu__bar--close");
-  hamburgerOptions.classList.toggle('hamburger-hidden');
+  hamburgerOptions.classList.toggle("hamburger-hidden");
+});
+
+//Search Implementation
+
+const searchValue = document.querySelector(".search-text");
+
+searchValue.addEventListener("change", () => {
+  let searchItem = searchValue?.value;
+  console.log(searchItem);
+  searchItem = searchItem?.toLowerCase()?.trim();
+  searchValue.value = "";
+  console.log(searchItem);
+
+  if (searchItem)
+    window.location.href = `../templates/products.html?search=${searchItem}`;
 });

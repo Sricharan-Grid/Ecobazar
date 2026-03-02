@@ -1,7 +1,7 @@
-const loadProducts = async (category, sorting, rating) => {
+const loadProducts = async (category, sorting, rating, searchValue) => {
   try {
     console.log("invoked", category, sorting);
-    category = category.toLowerCase();
+
     const productsContainer = document.querySelector(".products__prods");
 
     //reading the Json
@@ -17,6 +17,14 @@ const loadProducts = async (category, sorting, rating) => {
         : products.filter(
             (product) => product?.category?.toLowerCase() === category,
           );
+
+    //Searching
+
+    if (searchValue) {
+      filteredProducts = products.filter((product) =>
+        product?.productName?.toLowerCase().trim().includes(searchValue),
+      );
+    }
 
     //Sorting
 
@@ -92,14 +100,18 @@ document.addEventListener("DOMContentLoaded", () => {
   //Getting Query params for the category
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const category = urlParams.get("category");
+  const category = urlParams.get("category")?.toLowerCase()?.trim();
+  const search = urlParams.get("search")?.toLowerCase()?.trim();
 
   // 2. Set dropdown values to match URL
-  document.querySelector(".filter-options").value = category;
+  if (category) {
+    document.querySelector(".filter-options").value = category;
+  }
+
   document.querySelector(".sort-options").value = "asc";
 
   // 3. Run your initial filter/sort/render function
-  loadProducts(category, "asc");
+  loadProducts(category, "asc", "", search);
 });
 
 const filterEl = document.querySelector(".filter-options");
