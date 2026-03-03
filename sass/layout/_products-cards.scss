@@ -22,6 +22,17 @@
       }
     }
 
+    &--no-stock-card {
+      border: 1px solid $color-warning-1;
+
+      &:hover,
+      &:active {
+        transform: scale(1.01);
+        border: 1px solid $color-primary;
+        box-shadow: 0 0.1rem 1rem 0.3rem rgba($color-warning-1, 0.2);
+      }
+    }
+
     .product-card {
       &__img {
         width: 15rem;

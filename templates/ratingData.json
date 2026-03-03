@@ -1,0 +1,17 @@
+[
+  {
+    "id": "rating01",
+    "displayName": "★★★★☆ & Up",
+    "value": "4"
+  },
+  {
+    "id": "rating02",
+    "displayName": "★★★☆☆ & Up",
+    "value": "3"
+  },
+  {
+    "id": "rating03",
+    "displayName": "★★☆☆☆ & Up",
+    "value": "2"
+  }
+]

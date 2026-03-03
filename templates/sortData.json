@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sort01",
+    "displayName": "A - Z",
+    "value": "asc"
+  },
+  {
+    "id": "sort02",
+    "displayName": "Z - A",
+    "value": "desc"
+  },
+  {
+    "id": "sort03",
+    "displayName": "Rating : Highest - Lowest",
+    "value": "ratingHigh"
+  },
+  {
+    "id": "sort04",
+    "displayName": "Rating : Lowest - Highest",
+    "value": "ratingLow"
+  },
+  {
+    "id": "sort05",
+    "displayName": "Price: Highest - Lowest",
+    "value": "priceHigh"
+  },
+  {
+    "id": "sort06",
+    "displayName": "Price: Lowest - Highest",
+    "value": "priceLow"
+  }
+]

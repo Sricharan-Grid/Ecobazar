@@ -196,7 +196,12 @@
               </p>
             </div>
 
-            <button class="bannerHero__left--shopnow btn btn--white">
+            <button
+              class="bannerHero__left--shopnow btn btn--white"
+              onclick="
+                window.location.href = './templates/products.html?category=all'
+              "
+            >
               Shop now &rarr;
             </button>
           </div>
@@ -211,7 +216,13 @@
               <h2 class="right-top__content--discount">75% OFF</h2>
               <p class="right-top__content--terms">Only Fruit & Vegetable</p>
 
-              <button class="right-top__content--shopnow btn btn--transparent">
+              <button
+                class="right-top__content--shopnow btn btn--transparent"
+                onclick="
+                  window.location.href =
+                    './templates/products.html?category=all'
+                "
+              >
                 Shop now &rarr;
               </button>
             </div>
@@ -225,6 +236,10 @@
               </h2>
               <button
                 class="right-bottom__content--shopnow btn btn--transparent"
+                onclick="
+                  window.location.href =
+                    './templates/products.html?category=all'
+                "
               >
                 Shop now &rarr;
               </button>
@@ -505,7 +520,14 @@
             </div>
           </div>
 
-          <button class="btn btn--white sale-card__btn">Shop Now &rarr;</button>
+          <button
+            class="btn btn--white sale-card__btn"
+            onclick="
+              window.location.href = './templates/products.html?category=all'
+            "
+          >
+            Shop Now &rarr;
+          </button>
         </div>
       </div>
 
@@ -520,7 +542,14 @@
             Started at <span class="price">$79.99</span>
           </p>
 
-          <button class="btn btn--white sale-card__btn">Shop Now &rarr;</button>
+          <button
+            class="btn btn--white sale-card__btn"
+            onclick="
+              window.location.href = './templates/products.html?category=all'
+            "
+          >
+            Shop Now &rarr;
+          </button>
         </div>
       </div>
 
@@ -535,7 +564,14 @@
             Up to <span class="price__black-bg">64% OFF</span>
           </p>
 
-          <button class="btn btn--white sale-card__btn">Shop Now &rarr;</button>
+          <button
+            class="btn btn--white sale-card__btn"
+            onclick="
+              window.location.href = './templates/products.html?category=all'
+            "
+          >
+            Shop Now &rarr;
+          </button>
         </div>
       </div>
     </section>
@@ -658,5 +694,5 @@
       </div>
     </footer>
   </body>
-  <script differ src="./templates/scripts/script.js"></script>
+  <script differ type="module" src="./templates/scripts/script.js"></script>
 </html>
