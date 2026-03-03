@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cat01",
+    "displayName": "All",
+    "value": "all"
+  },
+  {
+    "id": "cat02",
+    "displayName": "Fruits",
+    "value": "freshfruits"
+  },
+  {
+    "id": "cat03",
+    "displayName": "Vegetables",
+    "value": "freshvegetables"
+  },
+  {
+    "id": "cat04",
+    "displayName": "Meat & Fish",
+    "value": "meatfish"
+  }
+]

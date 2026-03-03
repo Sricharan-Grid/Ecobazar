@@ -121,11 +121,7 @@
             <a href="../index.html" class="list-item--link link">Home</a>
           </li>
           <li class="list-item list-item--2">
-            <a
-              href="#"
-              class="list-item--link link"
-              >Shop</a
-            >
+            <a href="#" class="list-item--link link">Shop</a>
           </li>
           <li href="" class="list-item list-item--3">
             <a class="list-item--link link">About Us</a>
@@ -212,7 +208,10 @@
             </div>
           </div>
 
-          <button class="btn btn--green products-banner__btn">
+          <button
+            class="btn btn--green products-banner__btn"
+            onclick="window.location.href = './products.html?category=all'"
+          >
             Shop Now &rarr;
           </button>
         </div>
@@ -226,10 +225,10 @@
           <p class="sort-options__label">Filter :</p>
 
           <select class="filter-options dropdown" name="category">
-            <option value="all">All</option>
+            <!-- <option value="all">All</option>
             <option value="freshfruits">Fruits</option>
             <option value="freshvegetables">Vegetables</option>
-            <option value="meatfish">Meat & Fish</option>
+            <option value="meatfish">Meat & Fish</option> -->
           </select>
         </div>
 
@@ -240,8 +239,8 @@
           <div class="sort-options">
             <p class="sort-options__label">Sort :</p>
             <select class="sort-options__dropdown dropdown" name="sort">
-              <option value="asc">A - Z</option>
-              <option value="desc">Z - A</option>
+              <!-- <option value="asc">A - Z</option>
+              <option value="desc">Z - A</option> -->
             </select>
           </div>
 
@@ -252,8 +251,8 @@
               class="rating-options__dropdown dropdown"
               name="rating-sort"
             >
-              <option value="high">Highest - Lowest</option>
-              <option value="low">Lowest - Highest</option>
+              <!-- <option value="high">Highest - Lowest</option>
+              <option value="low">Lowest - Highest</option> -->
             </select>
           </div>
 
@@ -264,7 +263,7 @@
       <div class="products__prods">
         <!-- Cards -->
 
-        <!-- <div class="products__prods--card">
+        <!-- <div class="products__prods--card products__prods--no-stock-card">
           <p class="product-card__stock product-card__stock--nostock stock">
             less Stock
           </p>
@@ -407,7 +406,7 @@
         </ul>
       </div>
     </footer>
-    <script differ src="./scripts/script.js"></script>
-    <script differ src="./scripts/products.js"></script>
+    <script differ type="module" src="./scripts/script.js"></script>
+    <script differ type="module" src="./scripts/products.js"></script>
   </body>
 </html>
