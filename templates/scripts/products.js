@@ -65,7 +65,7 @@ const renderProducts = (filteredProducts, productsContainer) => {
       // prettier-ignore
       const {imageLink,availability,id,productName,rating,discountPrice,actualPrice} = cardElement;
 
-      const cardHtml = `<div class="products__prods--card" data-id="${id}" "products__prods--no-stock-card">
+      const cardHtml = `<div class="products__prods--card" data-id="${id}">
         <p class="stock product-card__stock ${availability.replaceAll(" ", "").toLowerCase() != "instock" ? "product-card__stock--" + availability.replaceAll(" ", "").toLowerCase() : "product-card__stock--hidden"}">            
         ${availability}
         </p>

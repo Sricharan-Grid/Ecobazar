@@ -1087,14 +1087,6 @@ body {
   border: 1px solid #00b207;
   box-shadow: 0 0.1rem 1rem 0.3rem rgba(0, 178, 7, 0.2);
 }
-.products__prods--no-stock-card {
-  border: 1px solid #ea4b48;
-}
-.products__prods--no-stock-card:hover, .products__prods--no-stock-card:active {
-  transform: scale(1.01);
-  border: 1px solid #00b207;
-  box-shadow: 0 0.1rem 1rem 0.3rem rgba(234, 75, 72, 0.2);
-}
 .products__prods .product-card__img {
   width: 15rem;
   margin-top: 2rem;
