@@ -1,3 +1,6 @@
+// 'use strict'
+
+
 import { errorHandler } from "./helper.js";
 
 //Discount Timer
@@ -62,3 +65,11 @@ searchValue.addEventListener("change", () => {
     errorHandler(err, "Search Onchange Event");
   }
 });
+
+
+
+
+let age = 10
+console.log(age)
+// agee = 20;
+console.log(agee);

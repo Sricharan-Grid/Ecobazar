@@ -20,7 +20,7 @@ const loadProducts = async (category, sorting, rating, searchValue) => {
     let filteredProducts = [];
 
     // Filtering the Products Based on Categories
-    filteredProducts = filterProducts(products, category, "category");
+    filteredProducts = filterProducts(products, category, "category", "");
 
     //Sorting
     filteredProducts = sortProducts(filteredProducts, sorting);
@@ -154,8 +154,8 @@ const filterProducts = (products, category, type, rating) => {
       );
     }
 
-    category.toLowerCase().trim();
-    type.toLowerCase().trim() ?? "general";
+    category?.toLowerCase()?.trim();
+    type?.toLowerCase()?.trim() || "general";
 
     let filteredProducts = [];
 
@@ -175,8 +175,8 @@ const filterProducts = (products, category, type, rating) => {
     if (type === "rating") {
       filteredProducts = products?.filter(
         (product) =>
-          product.rating >= rating &&
-          product.category.toLowerCase() === category,
+          product.rating == rating
+        //  &&product.category.toLowerCase() === category,
       );
     }
 
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const search = urlParams?.get("search")?.toLowerCase()?.trim();
 
   // Set dropdown values to match URL
-  console.log('category' , category)
+  console.log("category", category);
   if (category) {
     filterEl.value = category;
   }

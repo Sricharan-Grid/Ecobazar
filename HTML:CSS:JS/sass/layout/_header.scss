@@ -19,6 +19,19 @@
     color: $color-white;
   }
 
+  // .drop{ 
+  //   width: 5rem;
+  //   @include flex-even;
+  //   //  display: block; 
+  //   background-color: aqua;
+  //   gap: 4px;
+  //   margin: auto;
+  //   text-align: center;
+  //   align-self: center;
+  //   justify-self: center;
+  //   justify-content: center;
+  // }
+
   &__top {
     width: 100%;
     padding: 1rem 10rem;

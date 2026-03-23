@@ -25,7 +25,8 @@
     .product-card {
       &__img {
         width: 15rem;
-        margin-top: 2rem;
+        // height: 15vh;
+        margin: 2rem 0;
       }
 
       &__stock {
@@ -63,7 +64,9 @@
       &__details {
         width: 95%;
         @include flex-sb;
+        justify-items: flex-end;
         padding: 1rem;
+        background-color: aqua;
 
         &--name {
           font-size: 1.4rem;

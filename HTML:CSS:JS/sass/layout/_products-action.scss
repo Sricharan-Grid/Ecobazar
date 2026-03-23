@@ -22,16 +22,31 @@
       @include flex-sb;
       padding: 1rem;
 
+      //Responsive phone 600px
+      @include respond(phone) {
+        width: 100%;
+        flex-direction: column;
+      }
+
       .sort-options {
         @include flex-even;
 
         //Responsive phone 600px
         @include respond(phone) {
+          // background-color: aquamarine;
+          width: 99%;
           flex-direction: column;
+          
         }
 
         &:not(:first-child) {
           margin-left: 3rem;
+
+           //Responsive phone 600px
+        @include respond(phone) {
+          margin: 0;
+        }
+
         }
       }
     }
@@ -44,6 +59,13 @@
         0.1rem,
         solid $color-grey;
       color: $color-grey;
+
+      
+        //Responsive phone 600px
+        @include respond(phone) {
+        width: 60%;
+        flex-direction: column;
+      }
     }
   }
 }
